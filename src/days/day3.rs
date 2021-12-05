@@ -22,10 +22,10 @@ impl Day3 {
         let mut epsilon = 0;
         bits.iter().enumerate().for_each(|(i, (a, b))| {
             if a < b {
-                gamma = (1 << bits.len() - i - 1) | gamma
+                gamma |= 1 << (bits.len() - i - 1)
             }
             if a > b {
-                epsilon = (1 << bits.len() - i - 1) | epsilon
+                epsilon |= 1 << (bits.len() - i - 1)
             }
         });
 
@@ -54,7 +54,7 @@ impl Day3 {
             }
 
             if count.0 <= count.1 {
-                oxygen = (1 << l - i - 1) | oxygen;
+                oxygen |= 1 << (l - i - 1);
                 curr_oxygen += "1";
             } else {
                 curr_oxygen += "0";
@@ -76,7 +76,7 @@ impl Day3 {
             if count.1 == 0 || (count.0 > 0 && count.0 <= count.1) {
                 curr_scrubber += "0";
             } else {
-                scrubber = (1 << l - i - 1) | scrubber;
+                scrubber |= 1 << (l - i - 1);
                 curr_scrubber += "1";
             }
         }
