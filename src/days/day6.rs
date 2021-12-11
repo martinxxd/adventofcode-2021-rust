@@ -6,7 +6,7 @@ impl Day6 {
             return 0;
         }
 
-        let mut fishs = input.split(",").fold([0; 9], |mut map, n| {
+        let mut fishs = input.split(',').fold([0; 9], |mut map, n| {
             map[n.parse::<usize>().unwrap()] += 1;
             map
         });

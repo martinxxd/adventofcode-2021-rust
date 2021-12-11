@@ -21,7 +21,7 @@ impl Day10 {
             let (ch, queue) = Day10::parse_line(line);
             if ch.is_none() && queue.is_some() {
                 let mut queue = queue.unwrap();
-                while queue.len() > 0 {
+                while !queue.is_empty() {
                     let ch = queue.pop_back().unwrap();
                     points = (points * 5) + Day10::char_to_score_incomplete(Day10::char_opening_to_closing(ch));
                 }
@@ -30,7 +30,7 @@ impl Day10 {
             }
         }
 
-        all_points.sort();
+        all_points.sort_unstable();
         if !all_points.is_empty() {
             all_points[all_points.len() / 2]
         } else {

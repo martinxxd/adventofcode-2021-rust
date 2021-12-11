@@ -12,9 +12,9 @@ impl Digit {
         let flags = Digit::str_into_flags(val);
         let uniques = flags.iter().filter(|&&f| f == 1).count();
         Digit {
-            flags: flags,
+            flags,
             value: Digit::flag_into_digit(flags, uniques),
-            uniques: uniques,
+            uniques,
         }
     }
 
@@ -50,7 +50,7 @@ impl Digit {
         flags
     }
 
-    fn flag_into_digit(flags: [i8; 7], uniques: usize) -> i8 {
+    fn flag_into_digit(_flags: [i8; 7], uniques: usize) -> i8 {
         let mut digit: Option<i8> = None;
         match uniques {
             2 => {
@@ -89,10 +89,8 @@ impl Day8 {
                         }
                         _ => {}
                     }
-                } else {
-                    if digit.value != -1 {
-                        count += 1;
-                    }
+                } else if digit.value != -1 {
+                    count += 1;
                 }
             }
         }

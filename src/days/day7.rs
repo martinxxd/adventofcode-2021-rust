@@ -6,7 +6,7 @@ impl Day7 {
             return 0;
         }
 
-        let heights: Vec<i32> = input.split(",").map(|x| x.parse::<i32>().unwrap()).collect();
+        let heights: Vec<i32> = input.split(',').map(|x| x.parse::<i32>().unwrap()).collect();
 
         fn calc_fuel(heights: &Vec<i32>, target_height: i32, acc: bool) -> i32 {
             let mut fuel = 0;
@@ -14,7 +14,7 @@ impl Day7 {
                 let steps = i32::abs(height - target_height);
                 if acc {
                     let mut step = 1;
-                    for i in 0..steps {
+                    for _i in 0..steps {
                         fuel += step;
                         step += 1;
                     }

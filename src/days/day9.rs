@@ -4,7 +4,7 @@ struct Day9 {}
 
 impl Day9 {
     pub fn smoke_basin(inputs: Vec<String>) -> i32 {
-        if inputs.len() == 0 {
+        if inputs.is_empty() {
             return 0;
         }
 
@@ -47,7 +47,7 @@ impl Day9 {
     }
 
     pub fn largest_basin(inputs: Vec<String>) -> i32 {
-        if inputs.len() == 0 {
+        if inputs.is_empty() {
             return 0;
         }
 
@@ -87,7 +87,7 @@ impl Day9 {
 
             let dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)];
 
-            while queue.len() > 0 {
+            while !queue.is_empty() {
                 let (i, j) = queue.pop_front().unwrap();
 
                 for dir in dirs {
@@ -121,7 +121,7 @@ impl Day9 {
             }
         }
 
-        risk_levels.sort();
+        risk_levels.sort_unstable();
         let n = risk_levels.len();
         risk_levels[n - 1] * risk_levels[n - 2] * risk_levels[n - 3]
     }

@@ -36,7 +36,7 @@ impl Day11 {
                 seen.insert((p.0 as usize, p.1 as usize));
             }
 
-            while queue.len() > 0 {
+            while !queue.is_empty() {
                 let (i, j) = queue.pop_front().unwrap();
 
                 for dir in dirs {
@@ -88,7 +88,7 @@ impl Day11 {
         }
 
         if simultaneously {
-            return -1;
+            -1
         } else {
             num_flashes
         }
