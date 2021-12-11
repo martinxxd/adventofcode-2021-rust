@@ -53,7 +53,7 @@ mod tests {
 
     #[test]
     fn test_sonar_sweep_example() {
-        let input = utils::read_file("input/day1_1.txt".to_string());
+        let input = utils::read_file_lines("input/day1_1.txt".to_string());
         assert_eq!(Day1::sonar_sweep(input), 7);
     }
 
@@ -64,13 +64,13 @@ mod tests {
 
     #[test]
     fn test_sonar_sweep() {
-        let input = utils::read_file("input/day1_2.txt".to_string());
+        let input = utils::read_file_lines("input/day1_2.txt".to_string());
         assert_eq!(Day1::sonar_sweep(input), 1616);
     }
 
     #[test]
     fn test_sonar_sweep_window_example() {
-        let input = utils::read_file("input/day1_1.txt".to_string());
+        let input = utils::read_file_lines("input/day1_1.txt".to_string());
         assert_eq!(Day1::sonar_sweep_window(input), 5);
     }
 
@@ -81,7 +81,7 @@ mod tests {
 
     #[test]
     fn test_sonar_sweep_window() {
-      let input = utils::read_file("input/day1_2.txt".to_string());
+      let input = utils::read_file_lines("input/day1_2.txt".to_string());
       assert_eq!(Day1::sonar_sweep_window(input), 1645);
     }
 }

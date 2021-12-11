@@ -92,7 +92,7 @@ mod tests {
 
     #[test]
     fn test_binary_diagnostic_example() {
-        let input = utils::read_file("input/day3_1.txt".to_string());
+        let input = utils::read_file_lines("input/day3_1.txt".to_string());
         assert_eq!(Day3::binary_diagnostic(input), 198);
     }
 
@@ -103,13 +103,13 @@ mod tests {
 
     #[test]
     fn test_binary_diagnostic() {
-        let input = utils::read_file("input/day3_2.txt".to_string());
+        let input = utils::read_file_lines("input/day3_2.txt".to_string());
         assert_eq!(Day3::binary_diagnostic(input), 2954600);
     }
 
     #[test]
     fn test_binary_diagnostic_life_support_example() {
-        let input = utils::read_file("input/day3_1.txt".to_string());
+        let input = utils::read_file_lines("input/day3_1.txt".to_string());
         assert_eq!(Day3::binary_diagnostic_life_support(input), 230);
     }
 
@@ -120,7 +120,7 @@ mod tests {
 
     #[test]
     fn test_binary_diagnostic_life_support() {
-        let input = utils::read_file("input/day3_2.txt".to_string());
+        let input = utils::read_file_lines("input/day3_2.txt".to_string());
         assert_eq!(Day3::binary_diagnostic_life_support(input), 1662846);
     }
 }

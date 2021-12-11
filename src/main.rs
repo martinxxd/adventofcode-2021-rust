@@ -10,8 +10,12 @@ fn main() {
 mod utils {
     use std::fs;
 
-    pub(crate) fn read_file(filename: String) -> Vec<String> {
-        let contents = fs::read_to_string(filename).unwrap_or("".to_string());
+    pub(crate) fn read_file(filename: String) -> String {
+        fs::read_to_string(filename).unwrap_or("".to_string())
+    }
+
+    pub(crate) fn read_file_lines(filename: String) -> Vec<String> {
+        let contents = read_file(filename);
         contents.lines().map(|c| c.to_string()).collect()
     }
 }

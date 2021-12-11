@@ -61,7 +61,7 @@ mod tests {
 
     #[test]
     fn test_dive_example() {
-        let input = utils::read_file("input/day2_1.txt".to_string());
+        let input = utils::read_file_lines("input/day2_1.txt".to_string());
         assert_eq!(Day2::dive(input), 150);
     }
 
@@ -72,13 +72,13 @@ mod tests {
 
     #[test]
     fn test_dive() {
-        let input = utils::read_file("input/day2_2.txt".to_string());
+        let input = utils::read_file_lines("input/day2_2.txt".to_string());
         assert_eq!(Day2::dive(input), 1648020);
     }
 
     #[test]
     fn test_dive_aim_example() {
-        let input = utils::read_file("input/day2_1.txt".to_string());
+        let input = utils::read_file_lines("input/day2_1.txt".to_string());
         assert_eq!(Day2::dive_aim(input), 900);
     }
 
@@ -89,7 +89,7 @@ mod tests {
 
     #[test]
     fn test_dive_aim() {
-        let input = utils::read_file("input/day2_2.txt".to_string());
+        let input = utils::read_file_lines("input/day2_2.txt".to_string());
         assert_eq!(Day2::dive_aim(input), 1759818555);
     }
 }

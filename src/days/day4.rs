@@ -114,7 +114,7 @@ mod tests {
 
     #[test]
     fn test_giant_squid_example() {
-        let input = utils::read_file("input/day4_1.txt".to_string());
+        let input = utils::read_file_lines("input/day4_1.txt".to_string());
         assert_eq!(Day4::giant_squid(input), 4512);
     }
 
@@ -125,13 +125,13 @@ mod tests {
 
     #[test]
     fn test_giant_squid() {
-        let input = utils::read_file("input/day4_2.txt".to_string());
+        let input = utils::read_file_lines("input/day4_2.txt".to_string());
         assert_eq!(Day4::giant_squid(input), 16674);
     }
 
     #[test]
     fn test_giant_squid_last_example() {
-        let input = utils::read_file("input/day4_1.txt".to_string());
+        let input = utils::read_file_lines("input/day4_1.txt".to_string());
         assert_eq!(Day4::giant_squid_last(input), 1924);
     }
 
@@ -142,7 +142,7 @@ mod tests {
 
     #[test]
     fn test_giant_squid_last() {
-        let input = utils::read_file("input/day4_2.txt".to_string());
+        let input = utils::read_file_lines("input/day4_2.txt".to_string());
         assert_eq!(Day4::giant_squid_last(input), 7075);
     }
 }

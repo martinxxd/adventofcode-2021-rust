@@ -108,7 +108,7 @@ mod tests {
 
     #[test]
     fn test_hydrothermal_venture_example() {
-        let input = utils::read_file("input/day5_1.txt".to_string());
+        let input = utils::read_file_lines("input/day5_1.txt".to_string());
         assert_eq!(Day5::hydrothermal_venture(input, true), 5);
     }
 
@@ -119,13 +119,13 @@ mod tests {
 
     #[test]
     fn test_hydrothermal_venture() {
-        let input = utils::read_file("input/day5_2.txt".to_string());
+        let input = utils::read_file_lines("input/day5_2.txt".to_string());
         assert_eq!(Day5::hydrothermal_venture(input, true), 6687);
     }
 
     #[test]
     fn test_hydrothermal_venture_all_example() {
-        let input = utils::read_file("input/day5_1.txt".to_string());
+        let input = utils::read_file_lines("input/day5_1.txt".to_string());
         assert_eq!(Day5::hydrothermal_venture(input, false), 12);
     }
 
@@ -136,7 +136,7 @@ mod tests {
 
     #[test]
     fn test_hydrothermal_venture_all() {
-        let input = utils::read_file("input/day5_2.txt".to_string());
+        let input = utils::read_file_lines("input/day5_2.txt".to_string());
         assert_eq!(Day5::hydrothermal_venture(input, false), 19851);
     }
 }
