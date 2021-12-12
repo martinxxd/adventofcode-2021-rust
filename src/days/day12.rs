@@ -55,10 +55,8 @@ impl Day12 {
                         } else if *count > 2 {
                             return true;
                         }
-                    } else {
-                        if *count > 1 {
-                            return true;
-                        }
+                    } else if *count > 1 {
+                        return true;
                     }
                 }
 
